@@ -1,0 +1,63 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 55vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  
+  .card {
+    /* Existing styles */
+    background-image: url('./asset/poker.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    transition: rotate ease, box-shadow 0.3s ease; /* Smooth transition for the box-shadow */
+    animation: shake 2.2s ease-in-out infinite;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0 25px 6px rgba(255, 255, 255, 0.6); /* Example shadow effect */
+  }
+
+  @keyframes shake {
+    0%, 2% {
+      transform: rotate(-3deg);
+    }
+    6% {
+        transform: rotate(3deg);
+      }
+    10.5% {
+      transform: rotate(-2deg);
+    }
+    12.5% {
+        transform: rotate(2deg);
+      }
+      14.5% {
+        transform: rotate(-1deg);
+      }
+    16.5%, 100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+
+  
